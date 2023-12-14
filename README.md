@@ -18,7 +18,7 @@ We then created a for loop to see what menu the customer chose, validating that 
 
 This was a good blueprint for the challenge.
 
-After we stored the input as a variable, the custoemr is asked how many they would like, and as above check the validation. If it wasn't a number, their selection would be defaulted to 1.
+After we stored the input as a variable, the custoemer is asked how many they would like, and as above check the validation. If it wasn't a number, their selection would be defaulted to 1.
 We then .append their selection to the order_list.
 
 ![](<Screenshot 2023-12-11 090902.png>)

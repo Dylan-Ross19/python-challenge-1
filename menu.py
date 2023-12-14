@@ -77,6 +77,7 @@ while place_order:
         # Store the menu category associated with its menu item number
         menu_items[i] = key
         # Add 1 to the menu item number
+        # I believe they meant to augment it. Not just add 1
         i += 1
 
     # Get the customer's input
@@ -149,23 +150,20 @@ while place_order:
 
                     # Tell the customer that their input isn't valid
                 else:
-                    print("Not a valid input")
-
-                # Tell the customer they didn't select a menu option
-            else:
-                print(f"{item_input} is not an item.")
+                    print("Not a valid input")              
         else:
             # Tell the customer they didn't select a menu option
-            print(f"{menu_selection} was not a menu option.")
+            print(menu_selection + "was not a menu option.")
+            
     else:
         # Tell the customer they didn't select a number
         print("You didn't select a number.")
-
+         
+    # Ask the customer if they would like to order anything else
     while True:
-        # Ask the customer if they would like to order anything else
         keep_ordering = input("Would you like to keep ordering? (Y)es or (N)o ")
-
         # 5. Check the customer's input
+        # use match:case as per instructions.
         match keep_ordering.upper():
             case "Y":
                 # Keep ordering
@@ -200,13 +198,14 @@ for item_ordered in order_list:
     quantity = item_ordered["Quantity"]
 
     # 8. Calculate the number of spaces for formatted printing
-    number_of_spaces = 27 - len(item_name)
+    number_of_spaces = 26 - len(item_name)
 
     # 9. Create space strings
     space_str = " " * number_of_spaces
 
     # 10. Print the item name, price, and quantity
-    print(f"\n{item_name}{space_str}|${price}  | {quantity}")
+    print(f"\n{item_name}{space_str}|${price}   | {quantity}")
+       
 
 # 11. Calculate the cost of the order using list comprehension
 # Multiply the price by quantity for each item in the order list, then sum()
